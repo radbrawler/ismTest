@@ -1,0 +1,6 @@
+# Ignore these files
+*.o
+*.a
+*.out
+sample1_unittest
+test_ism

@@ -1,0 +1,26 @@
+# Include Flags for includeing header files
+# These flags are passed to preprocessor
+CPPFLAGS += -I /home/anmol/git/googletest/googlemock/include
+CPPFLAGS += -I /home/anmol/git/googletest/googletest/include
+
+# Flags passed to c++ compiler
+CXXFLAGS += -g -Wall -Wextra -pthread 
+
+# Linker Flags 
+LFLAGS = -L /home/anmol/git/googletest/build/googlemock/gtest -lgtest -lpthread 
+LFLAGS += -L /home/anmol/git/googletest/build/googlemock -lgmock
+
+# The Test input file containing main function
+MAIN = test_ism.cc
+
+# The file to be tested 
+FUT = ism.cpp
+
+# The output object file
+OUT = ism
+
+# The compiler
+CXX = g++
+
+all:
+	$(CXX) -isystem $(CPPFLAGS) -g -Wall -Wextra -pthread -c $(MAIN) -o test_ism

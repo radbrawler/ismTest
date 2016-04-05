@@ -1,0 +1,76 @@
+Running main() from gtest_main.cc
+[==========] Running 13 tests from 8 test cases.
+[----------] Global test environment set-up.
+[----------] 3 tests from GuardPositioning
+[ RUN      ] GuardPositioning.canSetNumericGuardPosition
+[       OK ] GuardPositioning.canSetNumericGuardPosition (0 ms)
+[ RUN      ] GuardPositioning.canSetProperNumericGuardPosition
+test_ism.cc:69: Failure
+Expected:  throws an exception.
+  Actual: it doesn't.
+[  FAILED  ] GuardPositioning.canSetProperNumericGuardPosition (0 ms)
+[ RUN      ] GuardPositioning.cannotSetAlphabeticGuardPosition
+test_ism.cc:74: Failure
+Expected:  throws an exception.
+  Actual: it doesn't.
+[  FAILED  ] GuardPositioning.cannotSetAlphabeticGuardPosition (0 ms)
+[----------] 3 tests from GuardPositioning (0 ms total)
+
+[----------] 1 test from VehicleDatabaseEntry
+[ RUN      ] VehicleDatabaseEntry.setVehicleSlot
+[       OK ] VehicleDatabaseEntry.setVehicleSlot (0 ms)
+[----------] 1 test from VehicleDatabaseEntry (0 ms total)
+
+[----------] 2 tests from VehicleDatabaseExit
+[ RUN      ] VehicleDatabaseExit.getFreeSlotAfterSetting
+[       OK ] VehicleDatabaseExit.getFreeSlotAfterSetting (0 ms)
+[ RUN      ] VehicleDatabaseExit.getFreeSlotBeforeSetting
+test_ism.cc:102: Failure
+      Expected: 0
+To be equal to: check
+      Which is: -1
+[  FAILED  ] VehicleDatabaseExit.getFreeSlotBeforeSetting (0 ms)
+[----------] 2 tests from VehicleDatabaseExit (0 ms total)
+
+[----------] 1 test from VehicleStatus
+[ RUN      ] VehicleStatus.checkStatus
+[       OK ] VehicleStatus.checkStatus (0 ms)
+[----------] 1 test from VehicleStatus (0 ms total)
+
+[----------] 2 tests from VehicleMarked
+[ RUN      ] VehicleMarked.checkIfMarked
+[       OK ] VehicleMarked.checkIfMarked (0 ms)
+[ RUN      ] VehicleMarked.checkIfUnmarked
+[       OK ] VehicleMarked.checkIfUnmarked (0 ms)
+[----------] 2 tests from VehicleMarked (0 ms total)
+
+[----------] 1 test from VehicleColor
+[ RUN      ] VehicleColor.checkColoredProperly
+[       OK ] VehicleColor.checkColoredProperly (0 ms)
+[----------] 1 test from VehicleColor (0 ms total)
+
+[----------] 1 test from VehicleDriverName
+[ RUN      ] VehicleDriverName.checkDriverName
+[       OK ] VehicleDriverName.checkDriverName (0 ms)
+[----------] 1 test from VehicleDriverName (0 ms total)
+
+[----------] 2 tests from VehicleNumber
+[ RUN      ] VehicleNumber.checkValidRegistrationNumber
+[       OK ] VehicleNumber.checkValidRegistrationNumber (0 ms)
+[ RUN      ] VehicleNumber.checkInValidRegistrationNumber
+test_ism.cc:142: Failure
+Expected: number throws an exception.
+  Actual: it doesn't.
+[  FAILED  ] VehicleNumber.checkInValidRegistrationNumber (0 ms)
+[----------] 2 tests from VehicleNumber (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 13 tests from 8 test cases ran. (0 ms total)
+[  PASSED  ] 9 tests.
+[  FAILED  ] 4 tests, listed below:
+[  FAILED  ] GuardPositioning.canSetProperNumericGuardPosition
+[  FAILED  ] GuardPositioning.cannotSetAlphabeticGuardPosition
+[  FAILED  ] VehicleDatabaseExit.getFreeSlotBeforeSetting
+[  FAILED  ] VehicleNumber.checkInValidRegistrationNumber
+
+ 4 FAILED TESTS
